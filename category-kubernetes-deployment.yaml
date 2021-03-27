@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: category-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: category-deployment
+  template:
+    metadata:
+      labels:
+        app: category-deployment
+    spec:
+      containers:
+        - name: aws-ecr-spring-boot-category
+          image: <act-id>.dkr.ecr.us-west-2.amazonaws.com/aws-ecr-spring-boot-category
+          ports:
+            - containerPort: 8092
+            - containerPort: 8093
+          env:
+            - name: spring.profiles.active
+              value: aws
+          imagePullPolicy: Always

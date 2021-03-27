@@ -1,0 +1,129 @@
+1. Get All Categories with
+Method GET
+URL : http://localhost:8092/category
+
+Results
+
+{
+   "content":[
+      {
+         "id":4,
+         "categoryName":"Young Men's Clothing",
+         "categoryDescription":"Young Men's Branded Designer Clothing"
+      },
+      {
+         "id":6,
+         "categoryName":"Test Category Name",
+         "categoryDescription":"Test Category"
+      },
+      {
+         "id":3,
+         "categoryName":"Men's Clothing",
+         "categoryDescription":"Men's Branded Designer Clothing"
+      }
+   ],
+   "pageable":{
+      "sort":{
+         "sorted":true,
+         "unsorted":false
+      },
+      "offset":0,
+      "pageSize":20,
+      "pageNumber":0,
+      "paged":true,
+      "unpaged":false
+   },
+   "totalPages":1,
+   "totalElements":3,
+   "last":true,
+   "size":20,
+   "number":0,
+   "numberOfElements":3,
+   "sort":{
+      "sorted":true,
+      "unsorted":false
+   },
+   "first":true
+}
+
+2. Create a New Category with
+
+Method POST
+
+URL: http://localhost:8092/category
+
+Body
+
+{
+  "categoryName": "Young Women's Clothing",
+  "categoryDescription": "Young Women's Branded Designer Clothing"
+}
+
+3. Verify the new category creation with
+
+Method GET
+
+URL http://localhost:8092/category
+
+{
+   "content":[
+      {
+         "id":7,
+         "categoryName":"Young Women's Clothing",
+         "categoryDescription":"Young Women's Branded Designer Clothing"
+      },
+      {
+         "id":4,
+         "categoryName":"Young Men's Clothing",
+         "categoryDescription":"Young Men's Branded Designer Clothing"
+      },
+      {
+         "id":6,
+         "categoryName":"Test Category Name",
+         "categoryDescription":"Test Category"
+      },
+      {
+         "id":3,
+         "categoryName":"Men's Clothing",
+         "categoryDescription":"Men's Branded Designer Clothing"
+      }
+   ],
+   "pageable":{
+      "sort":{
+         "sorted":true,
+         "unsorted":false
+      },
+      "offset":0,
+      "pageSize":20,
+      "pageNumber":0,
+      "paged":true,
+      "unpaged":false
+   },
+   "totalPages":1,
+   "totalElements":4,
+   "last":true,
+   "size":20,
+   "number":0,
+   "numberOfElements":4,
+   "sort":{
+      "sorted":true,
+      "unsorted":false
+   },
+   "first":true
+}
+
+4. Update an existing category with
+
+Method PUT
+URL : http://localhost:8092/category/7
+
+Body
+
+{ "id":7,
+  "categoryName": "Young Women's Clothing",
+  "categoryDescription": "Young Women's Branded Designer Clothing Updated"
+}
+
+5. Delete an exsiting category
+
+http://localhost:8092/category/7
