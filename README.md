@@ -1,7 +1,7 @@
 
 # AWS Cloud Hierarchy
 
-![AWS EKS Architecture](AWS_Heirarchy_2.png)
+![AWS EKS Architecture](AWS_Hierarchy_2.png)
 ![AWS EKS Architecture](AWS_Heirarchy_1.png)
 
 # rollingstone-ecommerce-category-k8s-api
